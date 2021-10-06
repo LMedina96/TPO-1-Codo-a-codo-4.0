@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0b96aafb33.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="script/scripts.js"></script>
+    <title>MedGames</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="title" onmouseover="moveLogo(1)" onmouseout="moveLogo(0)"><i class="fas fa-gamepad"
+                id="logo"></i>MedGames</a>
+        <ul class="col-">
+          <li class="col- col-s"><a href="index.html">Inicio</a></li>
+          <li class="col- col-s"><a href="consolas.html">Consolas</a></li>
+          <li class="col- col-s"><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <div class="body">
+        <div class="construction">
+            <h2>Web bajo construcción</h2>
+    
+            <p>
+                Disculpe las molestias, lo redirigiremos devuelta a la pagina principal en 5 segundos...
+            </p>
+    
+            <div class="loader" id="loader"></div>
+        </div>
+    
+        <script type="text/javascript">
+            function redireccionar(){
+                window.location="index.html";
+            }
+            setTimeout ("redireccionar()", 5000);
+        </script>
+    </div>
+
+  <footer>
+    <div>
+      <a href="http://www.instagram.com" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="http://www.twitter.com" target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a href="https://www.linkedin.com" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="http://www.facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <a href="https://wa.me/1164025652" target="_blank"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
+    <p>Copyright®<br />Creado por Lucas Medina para codo a codo 4.0</p>
+  </footer>
+
+</body>
+</html>
