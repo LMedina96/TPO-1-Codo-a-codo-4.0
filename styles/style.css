@@ -345,6 +345,16 @@ footer i:hover{
             FORMULARIO        
 =============================*/
 
+.btnregistrarse{
+    float: right;
+}
+
+#msgIncorrecto{
+    text-align: center; 
+    color: red;
+    display: none; 
+    padding-top: 2rem;
+}
 
 /*=============================
             RESPONSIVE        

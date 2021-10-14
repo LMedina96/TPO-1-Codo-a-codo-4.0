@@ -14,21 +14,45 @@ function masInfo(a){
   document.getElementById('button' + [a]).style.display = 'none';
 }
 
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
+/*VALIDACIÓN JAVASCRIPT REGISTRO*/
+
+function takeValues(){
+  var user = document.getElementById("validationDefaultUsername");
+
+  localStorage.setItem("usuario", user.value);
+
+  var passwd = document.getElementById("validationDefault03");
+
+  localStorage.setItem("password", passwd.value);
+
+
+  var contraseña1 = document.getElementById("validationDefault03").value;
+  var contraseña2 = document.getElementById("validationDefault04").value;
+
+  if (contraseña1 != contraseña2){
+    alert("Las contraseñas no coinciden");
+    return false;
+  }else if(contraseña1 == contraseña2 && contraseña1 != ""){
+    alert("¡Registro exitoso!");
+    return true;
+  }
+}
+
+let passwordStorage = localStorage.getItem("password");
+let userStorage = localStorage.getItem("usuario");
+
+/*VALIDACIÓN JAVASCRIPT LOGUEO*/
+
+function validationLogin(){
+  var userID = document.getElementById("uname").value;
+  var passwordID = document.getElementById("pwd").value;
+
+  if (userStorage == userID && passwordStorage == passwordID){
+    alert("¡Bienvenido " + userID + "!");
+    return true;
+  }else{
+    document.getElementById("msgIncorrecto").style.display = "block";
+    return false;
+  }
+}
